@@ -7,7 +7,7 @@
 ***
 
 # Description
-This project is about programming a function that returns a line
+This project is about programming a function that returns a line that is 
 read from a file descriptor.
 
 
