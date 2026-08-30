@@ -6,7 +6,7 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 17:23:42 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/08/27 21:27:42 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/08/30 22:02:34 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@
 # include <stdio.h>
 
 typedef struct s_node;
+t_node *create_node(int fd, char *stash)
 
 #endif
