@@ -9,9 +9,6 @@
 # Description
 This project is about programming a function that reads a file descriptor and returns one line at a time until the end of the file. 
 
-
-
-
 ---
 
 # Instructions
