@@ -6,7 +6,7 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 17:23:42 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/10/14 20:15:03 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/10/15 15:08:23 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 char	*get_next_line(int fd);
 
 size_t	ft_strlen(const char *s);
-char	ft_strchr(const char *s, int c);
-char	*ft_strjoin(const char *stash, const char *buffer);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char *stash, char *buffer);
 
 #endif

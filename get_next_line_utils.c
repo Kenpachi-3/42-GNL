@@ -6,7 +6,7 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 17:23:30 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/10/14 20:10:36 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/10/15 15:39:16 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ size_t	ft_strlen(const char *s)
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-	
+
 	if (!s)
-		return (NULL)
+		return (NULL);
 	i = 0;
 	while (s[1] != '\0')
 	{
-		if (s[i] == char(c))
+		if (s[i] == char (c))
 			return ((char *)&s[i]);
 		i++;
 	}
@@ -46,34 +46,25 @@ char	*ft_strjoin(char *stash, char *buffer)
 	size_t	j;
 	char	*new_stash;
 
-	if (!stash)
-	{
-		stash = malloc(sizeof(char) * 1);
-		if (!stash)
-			return (NULL);
-		stash[0] = '\0';
-	}
-	char	*new_stash;
 	new_stash = malloc(ft_strlen(stash) + ft_strlen(buffer) + 1);
 	if (!new_stash)
 	{
 		free(stash);
-		return(NULL);
+		return (NULL);
 	}
 	i = 0;
-	while (stash[i] != '\0')
+	while (stash && stash[i] != '\0')
 	{
 		new_stash[i] = stash[i];
-		i++; 
+		i++;
 	}
 	j = 0;
 	while (buffer[j] != '\0')
 	{
-		new_stash[i] = buffer[j];
-		i++;
+		new_stash[i + j] = buffer[j];
 		j++;
 	}
-	new_stash[i] = '\0';
+	new_stash[i + j] = '\0';
 	free(stash);
 	return (new_stash);
 }
