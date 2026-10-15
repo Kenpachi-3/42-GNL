@@ -6,7 +6,7 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 17:23:42 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/10/08 22:10:56 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/10/14 20:15:03 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,13 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+# include <stddef.h>
+# include <sys/types.h>
 
-typedef struct s_node
-{
-	int				fd;
-	char			*stash;
-	struct s_node	*next;
-}	t_node;
-
-t_node	*create_node(int fd, char *stash);
 char	*get_next_line(int fd);
+
+size_t	ft_strlen(const char *s);
+char	ft_strchr(const char *s, int c);
+char	*ft_strjoin(const char *stash, const char *buffer);
 
 #endif

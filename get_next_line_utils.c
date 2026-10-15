@@ -6,21 +6,74 @@
 /*   By: ntshuma <ntshuma@student.42roma.it>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 17:23:30 by ntshuma           #+#    #+#             */
-/*   Updated: 2026/10/08 22:15:54 by ntshuma          ###   ########.fr       */
+/*   Updated: 2026/10/14 20:10:36 by ntshuma          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-t_node	*create_node(int fd, char *stash)
+size_t	ft_strlen(const char *s)
 {
-	t_node	*new_node;
+	size_t	i;
 
-	new_node = malloc(sizeof(t_node));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->fd = fd;
-	new_node->stash = stash;
-	new_node->next = NULL;
-	return (new_node);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	size_t	i;
+	
+	if (!s)
+		return (NULL)
+	i = 0;
+	while (s[1] != '\0')
+	{
+		if (s[i] == char(c))
+			return ((char *)&s[i]);
+		i++;
+	}
+	if ((char)c == '\0')
+		return ((char *)&s[i]);
+	return (NULL);
+}
+
+char	*ft_strjoin(char *stash, char *buffer)
+{
+	size_t	i;
+	size_t	j;
+	char	*new_stash;
+
+	if (!stash)
+	{
+		stash = malloc(sizeof(char) * 1);
+		if (!stash)
+			return (NULL);
+		stash[0] = '\0';
+	}
+	char	*new_stash;
+	new_stash = malloc(ft_strlen(stash) + ft_strlen(buffer) + 1);
+	if (!new_stash)
+	{
+		free(stash);
+		return(NULL);
+	}
+	i = 0;
+	while (stash[i] != '\0')
+	{
+		new_stash[i] = stash[i];
+		i++; 
+	}
+	j = 0;
+	while (buffer[j] != '\0')
+	{
+		new_stash[i] = buffer[j];
+		i++;
+		j++;
+	}
+	new_stash[i] = '\0';
+	free(stash);
+	return (new_stash);
 }
